@@ -332,6 +332,7 @@ body {
 
 .skills .container {
   position: relative;
+  padding: 0 150px;
 }
 
 .skills-list {
@@ -343,7 +344,7 @@ body {
 .skills .container::after {
   position: absolute;
   top: 70px;
-  right: 0;
+  right: 150px;
   display: inline-block;
   width: 340px;
   height: 367px;
