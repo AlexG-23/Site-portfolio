@@ -42,7 +42,9 @@
           <ul class="portfolio-list">
             <li class="portfolio-item">
               <a href="https://alexg-23.github.io/Sedona/index.html" target=”_blank”>
-                <img src="images/portfolio/sedona.jpg" alt="Sedona" width="221" height="300" class="portfolio-item-image">
+                <div class="portfolio-image-container">
+                  <img src="images/portfolio/sedona.jpg" alt="Sedona" width="221" height="300" class="portfolio-item-image">
+                </div>
               </a>
               <h2 class="title portfolio-item-title">Sedona</h2>
               <p class="subtitle portfolio-item-description">A site about Sedona, search and order a hotel here.</p>
@@ -55,7 +57,9 @@
             </li>
             <li class="portfolio-item">
               <a href="#" target=”_blank”>
-                <img src="images/portfolio/barbershop.jpg" alt="Barbershop" width="221" height="300" class="portfolio-item-image">
+                <div class="portfolio-image-container">
+                  <img src="images/portfolio/barbershop.jpg" alt="Barbershop" width="221" height="300" class="portfolio-item-image">
+                </div>
               </a>
               <h2 class="title portfolio-item-title two-lined-title">Barbershop Borodinski</h2>
               <p class="subtitle portfolio-item-description">Website of barbershop. With the possibility of ordering a queque and an online store.</p>
@@ -68,7 +72,9 @@
             </li>
             <li class="portfolio-item">
               <a href="https://htmlacademy-htmlcss.github.io/590651-device-33/master/index.html" target=”_blank”>
-                <img src="images/portfolio/device.jpg" alt="Device" width="221" height="300" class="portfolio-item-image">
+                <div class="portfolio-image-container">
+                  <img src="images/portfolio/device.jpg" alt="Device" width="221" height="300" class="portfolio-item-image">
+                </div>
               </a>
               <h2 class="title portfolio-item-title">Device</h2>
               <p class="subtitle portfolio-item-description">Gadgets online store. My first project.</p>
@@ -81,7 +87,9 @@
             </li>
             <li class="portfolio-item">
               <a href="" target=”_blank”>
-                <img src="images/portfolio/gllacy.jpg" alt="Glaccy" width="221" height="300" class="portfolio-item-image">
+                <div class="portfolio-image-container">
+                  <img src="images/portfolio/gllacy.jpg" alt="Glaccy" width="221" height="300" class="portfolio-item-image">
+                </div>
               </a>
               <h2 class="title portfolio-item-title">Gllacy</h2>
               <p class="subtitle portfolio-item-description">Ice cream shop website with delivery option.</p>
@@ -205,10 +213,12 @@
         <div class="container">
           <h2 class="title contact-title">Interested?</h2>
           <p class="descroption contact-description">If you are interested in the services of our company, fill out the form and we will contact you. No spam. You will receive a message from a live person who will accompany you in the ordering process.</p>
-          <label for="email" class="contact-field">
-            <input class="contact-input" id="email" type="email" name="email" placeholder="e-mail" required>
-            <button class="button contact-btn" type="submit">Submit</button>
-          </label>
+          <form action="#" class="email-form">
+            <label for="email" class="contact-field">
+              <input class="contact-input" id="email" type="email" name="email" placeholder="e-mail" required>
+              <button class="button contact-btn" type="submit">Submit</button>
+            </label>
+          </form>
         </div>
       </section>
     </main>
