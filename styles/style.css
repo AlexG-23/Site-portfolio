@@ -500,6 +500,7 @@ body {
 .insection-title {
   padding: 0;
   margin: 10px 0;
+  text-align: center;
   grid-column: 2/-1;
   grid-row: 2/3;
   font-size: 28px;
@@ -512,6 +513,7 @@ body {
 .acquaintance-description {
   padding: 0;
   margin: 0;
+  margin-bottom: 40px;
   grid-column: 2/-1;
   grid-row: 3/4;
   text-align: justify;
@@ -542,12 +544,25 @@ body {
   text-transform: uppercase;
 }
 
+.contact-description {
+  padding: 0 60px;
+  text-align: center;
+}
+
 .contact-input {
   width: 300px;
   padding: 10px;
   background-color: #EFEFEF;
   border: 2px solid #6CB9FF;
   border-radius: 10px 0px 0px 10px;
+}
+
+.contact-input:hover {
+  background-color: #e2e2e2;
+}
+
+.contact-input:active {
+  background-color: #e8eff8;
 }
 
 .contact-btn {
