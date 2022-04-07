@@ -829,8 +829,12 @@ body {
     right: 15px;
   }
 
+  .skills {
+    margin-bottom: 0;
+  }
+
   .skills .container {
-    padding: 0;
+    padding: 0 40px;
   }
 
   .skills-item {
@@ -839,5 +843,46 @@ body {
 
   .skill-range {
     width: 150px;
+  }
+
+  .sertificate-image-link {
+    max-width: 169px;
+    min-height: 237px;
+  }
+
+  .acquaintance .container {
+    padding: 0 10px;
+    grid-template-rows: 0.1fr 0.6fr 0.2fr 1fr 0.2fr 0.6fr;
+  }
+
+  .acquaintance-image {
+    width: 283px;
+    height: 224px;
+    object-position: 0 -100px;
+  }
+
+  .contact {
+    padding: 0 10px;
+  }
+
+  .contact .container {
+    max-width: 350px;
+    padding: 20px 0;
+  }
+
+  .contact-title {
+    margin: 0;
+  }
+
+  .contact-description {
+    padding: 0 20px;
+  }
+
+  .contact-input {
+    max-width: 180px;
+  }
+
+  .footer-link {
+    font-size: 10px;
   }
 }
