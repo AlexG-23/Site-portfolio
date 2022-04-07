@@ -1,5 +1,6 @@
 html {
   height: 100%;
+  overflow: hidden;
 }
 
 body {
@@ -7,13 +8,13 @@ body {
   margin: 0;
   padding: 0;
   flex-direction: column;
-  min-height: 100%;
-  font-family: 'Moulpali', cursive;
+  height: 100%;
+  perspective: 1px;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  transform-style: preserve-3d;
+  font-family: 'Moulpali', sans-serif;
   background-color: #f2f3f5;
-  background-image: url("../images/main-bg.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
 }
 
 *,
@@ -44,8 +45,46 @@ body {
   margin: 0 auto;
 }
 
+.page-header {
+  margin: 40px auto 0;
+  box-sizing: border-box;
+  min-height: 100vh;
+  width: 100vw;
+  position: relative;
+  transform-style: inherit;
+}
+
+.page-header,
+.page-header::before {
+  background: 50% 50% / cover;
+}
+
+.page-header::before {
+  position: absolute;
+  bottom: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+  margin-top: -40px;
+
+  display: block;
+  min-height: 100vh;
+  background-image: url("../images/main-bg.jpg");
+  background-size: cover;
+  transform-origin: center center 0;
+  transform: translateZ(-1px) scale(2);
+  z-index: -1;
+  
+  content: "";
+}
+
+.page-header * {
+  text-align: center;
+}
+
 .page-main {
   flex-grow: 1;
+  z-index: 1;
 }
 
 .button {
@@ -62,10 +101,6 @@ body {
   font-family: 'Montserrat', sans-serif;
 }
 
-.page-header {
-  margin-top: 40px;
-}
-
 .main-navigation {
   display: flex;
   width: 600px;
@@ -77,10 +112,10 @@ body {
 
 .nav-list {
   display: flex;
-  padding-left: 40px;
+  padding: 0;
+  margin: 0;
   width: 800px;
   flex-wrap: wrap;
-  margin: 0;
   list-style-type: none;
 }
 
@@ -210,8 +245,8 @@ body {
 }
 
 .services-buttons-list {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
   margin-top: -65px;
   margin-right: 40px;
   padding: 30px 0;
@@ -474,7 +509,8 @@ body {
 
 .acquaintance .container {
   display: grid;
-  padding: 0 200px;
+  padding: 0 10%;
+  margin-bottom: 100px;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 0.1fr 0.1fr 0.2fr 0.1fr 0.2fr;
 }
@@ -497,7 +533,7 @@ body {
 
 .insection-title {
   padding: 0;
-  margin: 10px 0;
+  margin: 30px 0;
   text-align: center;
   grid-column: 2/-1;
   grid-row: 2/3;
@@ -515,10 +551,12 @@ body {
   grid-column: 2/-1;
   grid-row: 3/4;
   text-align: justify;
+  line-height: 2;
 }
 
 .acquaintance-description:nth-of-type(2) {
   grid-row: 5/-1;
+  margin-bottom: 0;
 }
 
 .contact {
@@ -528,7 +566,7 @@ body {
 
 .contact .container {
   display: flex;
-  width: 920px;
+  max-width: 720px;
   padding: 40px 120px;
   text-align: center;
   flex-direction: column;
@@ -573,9 +611,10 @@ body {
 }
 
 .page-footer {
-  padding: 0;
+  padding: 5px;
   margin: 0;
   background-color: #e8eff8;
+  z-index: 1;
 }
 
 .footer-list {
@@ -618,28 +657,47 @@ body {
 }
 
 @media (max-width: 1280px) {
-  .portfolio-list {
-    width: 720px;
-  }
-  
   .services .container {
-    padding: 30px 100px 80px;
+    padding: 30px 30px 80px;
   }
 
   .services-buttons-list {
     border: none;
-    margin: auto;
-    margin-bottom: 60px;
+    margin: 0 auto;
+  }
+
+
+  .services-btn-item {
+    margin-bottom: 0;
   }
 
   .services-btn-item:not(:last-child) {
     margin-right: 50px;
   }
 
+  .service-btn {
+    min-width: 120px;
+    font-size: 12px;
+    padding: 10px;
+  }
+
+  .service-title {
+    font-size: 22px;
+  }
+
+  .service-description {
+    font-size: 16px;
+    padding-right: 150px;
+  }
+
   .service-indicators {
-    left: 0;
+    left: 45px;
     bottom: -100px;
     flex-direction: row;
+  }
+
+  .service-item {
+    padding: 0 45px;
   }
 
   .service-item .service-price {
@@ -647,8 +705,11 @@ body {
   }
 
   .service-item::after {
-    top: 0;
-    right: -80px;
+    height: 80px;
+    width: 80px;
+    background-size: 80px 80px;
+    top: -45px;
+    right: 45px;
   }
 
   .skills-list {
@@ -657,6 +718,28 @@ body {
     width: 400px;
     padding: 0;
     margin: 40px auto;
+  }
+
+  .skills-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 30px;
+  }
+
+  .skills-item::before {
+    width: 25px;
+    height: 25px;
+    background-size: 25px 25px;
+  }
+
+  .skill-name {
+    font-size: 14px;
+  }
+
+  .skill-range {
+    width: 250px;
+    margin-bottom: 0;
   }
 
   .skills .container::after {
@@ -701,13 +784,13 @@ body {
     grid-row: 3/4;
   }
 
-  .insection-title {
-    margin: auto;
-  }
-
   .insection-title:first-of-type + .acquaintance-description {
     grid-column: 1/-1;
     grid-row: 4/5;
+  }
+
+  .acquaintance-description {
+    padding: 0 10%;
   }
 
   .acquaintance-description + .insection-title {
