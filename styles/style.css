@@ -496,8 +496,7 @@ body {
 
 .sertificate-image-link{
   display: block;
-  width: 230px;
-  height: 322px;
+  height: min-content;
 }
 
 .sertificate-image {
@@ -514,7 +513,7 @@ body {
   padding: 0 10%;
   margin-bottom: 100px;
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: 0.1fr 0.1fr 0.2fr 0.1fr 0.2fr;
+  grid-template-rows: 0.6fr 0.1fr 0.2fr 0.1fr 0.2fr;
 }
 
 .acquaintance-image {
@@ -884,7 +883,7 @@ body {
   }
 
   .acquaintance .container {
-    grid-template-rows: 0.1fr 1fr 0.2fr 1fr 0.2fr 0.6fr;
+    grid-template-rows: 0.4fr 0.6fr 0.2fr 1fr 0.2fr 0.6fr;
   }
 
   .acquaintance-image {
@@ -956,10 +955,6 @@ body {
 
   .service-price {
     margin-left: 30px;
-  }
-
-  .skills {
-    margin-bottom: 0;
   }
 
   .skills .container {
