@@ -759,7 +759,7 @@ body {
     padding: 0 40px;
     margin: auto;
     grid-template-columns: 1fr;
-    grid-template-rows: 0.1fr 1.5fr 0.2fr 1fr 0.2fr 1fr;
+    grid-template-rows: 0.5fr 1.5fr 0.2fr 1fr 0.2fr 1fr;
   }
   
   .acquaintance-image {
