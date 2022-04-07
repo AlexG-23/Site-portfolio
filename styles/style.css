@@ -103,7 +103,7 @@ body {
 
 .main-navigation {
   display: flex;
-  width: 600px;
+  max-width: 600px;
   margin: 0 auto;
   padding: 10px 20px;
   background-color: rgba(227, 227, 227, 0.5);
@@ -809,9 +809,40 @@ body {
   }
 }
 
+@media (max-width: 660px) {
+
+  .main-navigation {
+    max-width: 360px;
+    padding: 10px;
+  }
+
+  .skills .container {
+    padding: 0 60px;
+  }
+
+  .acquaintance .container {
+    grid-template-rows: 0.1fr 1.5fr 0.2fr 1fr 0.2fr 0.6fr;
+  }
+
+  .acquaintance-image {
+    width: 377px;
+    height: 300px;
+    object-position: 0 -130px;
+  }
+
+  .contact .container {
+    max-width: 520px;
+    padding: 40px 30px;
+  }
+
+  .contact-input {
+    min-width: 240px;
+  }
+}
+
 @media (max-width: 400px) {
   .main-navigation {
-    width: 320px;
+    max-width: 320px;
     padding: 10px;
   }
 
