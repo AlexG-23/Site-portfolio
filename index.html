@@ -17,10 +17,10 @@
               <a href="#" class="nav-link">Main</a>
             </li>
             <li class="nav-item">
-              <a href="#" class="nav-link">Projects</a>
+              <a href="#projects" class="nav-link">Projects</a>
             </li>
             <li class="nav-item">
-              <a href="#" class="nav-link">About</a>
+              <a href="#acquaintance" class="nav-link">About</a>
             </li>
             <li class="nav-item">
               <a href="#" class="nav-link">Terms</a>
@@ -37,7 +37,7 @@
       </div>
     </header>
     <main class="page-main">
-      <section class="portfolio">
+      <section class="portfolio" id="projects">
         <div class="container">
           <ul class="portfolio-list">
             <li class="portfolio-item">
@@ -207,7 +207,7 @@
           </ul>
         </div>
       </section>
-      <section class="acquaintance">
+      <section class="acquaintance" id="acquaintance">
         <div class="container">
           <img src="images/developer.png" alt="Hey! It's me! Nice to meet you!" width="322" height="507" class="acquaintance-image">
           <h2 class="title acquaintance-title">Let's get acquainted</h2>
@@ -240,5 +240,21 @@
         </li>
       </ul>
     </footer>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+    
+    <script>
+      $("a[href*=#]").bind("click", function (e) {
+        var anchor = $(this);
+        $("html, body")
+          .stop()
+          .animate(
+            {
+              scrollTop: $(anchor.attr("href")).offset().top,
+            },
+            700
+          );
+        e.preventDefault();
+      });
+    </script>
   </body>
 </html>
