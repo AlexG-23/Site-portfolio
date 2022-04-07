@@ -808,3 +808,36 @@ body {
     padding: 40px 70px;
   }
 }
+
+@media (max-width: 400px) {
+  .main-navigation {
+    width: 320px;
+    padding: 10px;
+  }
+
+  .service-btn {
+    min-width: 60px;
+    min-height: 60px;
+  }
+
+  .service-item {
+    padding: 0;
+  }
+
+  .service-item::after {
+    top: 45px;
+    right: 15px;
+  }
+
+  .skills .container {
+    padding: 0;
+  }
+
+  .skills-item {
+    max-width: 300px;
+  }
+
+  .skill-range {
+    width: 150px;
+  }
+}
