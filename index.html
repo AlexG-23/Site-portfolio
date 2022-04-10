@@ -116,15 +116,15 @@
           <ul class="services-buttons-list">
             <!-- by clicking on 1st element of list put active class on 1ts service-item -->
             <li class="services-btn-item service-btn-active">
-              <button class="service-btn" type="button">I have an idea!</button>
+              <button class="service-btn" type="button" onclick="serviceFirst()">I have an idea!</button>
             </li>
             <!-- by clicking on 2nd element of list put active class on 2nd service-item -->
             <li class="services-btn-item">
-              <button class="service-btn" type="button">I have a design!</button>
+              <button class="service-btn" type="button" onclick="serviceSecond()">I have a design!</button>
             </li>            
             <!-- by clicking on 3rd element of list put active class on 3rd service-item -->
             <li class="services-btn-item">
-              <button class="service-btn" type="button">I just wanna site...</button>
+              <button class="service-btn" type="button" onclick="serviceThird()">I just wanna site...</button>
             </li>
           </ul>
           <!-- when the 1st list item is active so this item is active -->
@@ -255,6 +255,50 @@
           );
         e.preventDefault();
       });
+    </script>
+
+    <script>
+        var firstButton = document.querySelector(".services-btn-item:first-of-type");
+        var firstService = document.querySelector(".service-idea");
+
+        var secondButton = document.querySelector(".services-btn-item:nth-of-type(2)");
+        var secondService = document.querySelector(".service-design");
+
+        var thirdButton = document.querySelector(".services-btn-item:nth-of-type(3)");
+        var thirdService = document.querySelector(".service-nothing");
+
+      function serviceFirst() {
+        firstButton.classList.add("service-btn-active");
+        firstService.classList.add("service-item-active");
+
+        secondButton.classList.remove("service-btn-active");
+        secondService.classList.remove("service-item-active");
+
+        thirdButton.classList.remove("service-btn-active");
+        thirdService.classList.remove("service-item-active");
+      }
+
+      function serviceSecond() {
+        secondButton.classList.add("service-btn-active");
+        secondService.classList.add("service-item-active");
+
+        firstButton.classList.remove("service-btn-active");
+        firstService.classList.remove("service-item-active");
+
+        thirdButton.classList.remove("service-btn-active");
+        thirdService.classList.remove("service-item-active");
+      }
+
+      function serviceThird() {
+        firstButton.classList.remove("service-btn-active");
+        firstService.classList.remove("service-item-active");
+
+        secondButton.classList.remove("service-btn-active");
+        secondService.classList.remove("service-item-active");
+
+        thirdButton.classList.add("service-btn-active");
+        thirdService.classList.add("service-item-active");
+      }
     </script>
   </body>
 </html>
