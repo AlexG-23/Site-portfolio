@@ -614,15 +614,12 @@ body {
   display: none;
   width: 100%;
   height: 100%;
+  background-color: rgba(240, 240, 240, 0.9);
   z-index: 20;
 }
 
 .modal-open {
   display: grid;
-}
-
-.modal-terms{
-  width: 80%;
 }
 
 .modal {
@@ -633,8 +630,11 @@ body {
   filter: drop-shadow(0px 0px 40px rgba(0, 0, 0, 0.5));
 }
 
+.modal-terms{
+  width: 80%;
+}
+
 .modal-close-btn {
-  display: block;
   width: 26px;
   height: 26px;
   position: absolute;
