@@ -139,9 +139,8 @@ body {
 }
 
 .nav-btn {
-  margin: auto;
+  margin-left: auto;
   padding: 8px 20px;
-  cursor: pointer;
 }
 
 .button:hover {
@@ -150,6 +149,11 @@ body {
 
 .button:active {
   color: #c0e0ff;
+}
+
+.button:disabled {
+  background-color: #a8a8a8;
+  cursor: not-allowed;
 }
 
 .developer {
