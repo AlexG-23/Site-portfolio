@@ -418,11 +418,11 @@ body {
 }
 
 .skills-item:first-child .skill-value {
-  width: 60%;
+  width: 85%;
 }
 
 .skills-item:nth-child(2) .skill-value {
-  width: 40%;
+  width: 70%;
 }
 
 .skills-item:nth-child(3) .skill-value {
