@@ -171,6 +171,7 @@ body {
   margin: 0 auto;
   margin-bottom: 80px;
   list-style-type: none;
+  justify-items: center;
 }
 
 .portfolio-image-container {
@@ -181,11 +182,8 @@ body {
 
 .portfolio-item {
   display: grid;
-  grid-template-rows: 1fr 0.1fr 0.1fr 0.5fr;
-}
-
-.portfolio-item{
   margin: 0 30px;
+  grid-template-rows: 1fr 0.1fr 0.1fr 0.5fr;
 }
 
 .portfolio-image-link {
@@ -663,6 +661,10 @@ body {
 }
 
 @media (max-width: 1280px) {
+  .portfolio-list {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
   .services .container {
     padding: 30px;
   }
@@ -802,6 +804,11 @@ body {
 }
 
 @media (max-width: 880px) {
+
+  .portfolio-list {
+    grid-template-columns: 1fr 1fr;
+  }
+
   .services-buttons-list {
     border: none;
     grid-template-rows: 1fr;
@@ -853,6 +860,11 @@ body {
   .nav-btn {
     margin: 0;
     margin-left: auto;
+  }
+
+  .portfolio-list {
+    grid-template-columns: 1fr;
+    margin: auto;
   }
 
   .services-buttons-list {
